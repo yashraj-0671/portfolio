@@ -1,32 +1,101 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import "../styles/Hero.css";
+
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
 
-      <div className="left">
+      <motion.div
+        className="hero-left"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
 
+        <p className="intro">Hello, I'm</p>
 
-        <h1>Hi, I'm</h1>
+        <h1>
+          <span>Yashraj</span> Dixit
+        </h1>
 
-<h2>Yashraj Dixit</h2>
+        <TypeAnimation
+          sequence={[
+            "Software Developer",
+            2000,
+            "React Developer",
+            2000,
+            "Frontend Developer",
+            2000,
+            "Java Programmer",
+            2000,
+          ]}
+          wrapper="h2"
+          repeat={Infinity}
+        />
 
-     
-
-        <h3>MCA Student | Frontend Developer</h3>
-
-        <p>
-          I build modern, responsive and animated web applications using
-          React and JavaScript.
+        <p className="desc">
+          MCA student at PSIT Kanpur passionate about building modern,
+          responsive and high-performance web applications using React,
+          JavaScript, Node.js and Python.
         </p>
 
-        <button>Download Resume</button>
+        <div className="hero-btns">
+          <button className="hire-btn">Hire Me</button>
 
-      </div>
+          <a href="/resume.pdf" download>
+            <button className="resume-btn">
+              Download Resume
+            </button>
+          </a>
+        </div>
 
-      <div className="right">
+        <div className="hero-icons">
 
-        <div className="circle"></div>
+          <a
+            href="https://github.com/yashraj-0671"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
 
-      </div>
+          <a
+            href="https://linkedin.com/in/yashraj-dixit-b5b3b83a9"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a href="mailto:umaatuldixit9598990671@gmail.com">
+            <FaEnvelope />
+          </a>
+
+        </div>
+
+      </motion.div>
+
+      <motion.div
+        className="hero-right"
+        animate={{ y: [-15, 15, -15] }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+        }}
+      >
+
+        <div className="profile-circle">
+
+          <img
+            src="/profile.png"
+            alt="Yashraj Dixit"
+          />
+
+        </div>
+
+      </motion.div>
 
     </section>
   );
