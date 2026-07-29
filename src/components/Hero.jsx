@@ -14,11 +14,14 @@ function Hero() {
         transition={{ duration: 1 }}
       >
 
-        <p className="intro">Hello, I'm</p>
+        <p className="intro">
+          Hello, I'm
+        </p>
 
         <h1>
           <span>Yashraj</span> Dixit
         </h1>
+
 
         <TypeAnimation
           sequence={[
@@ -35,21 +38,32 @@ function Hero() {
           repeat={Infinity}
         />
 
+
         <p className="desc">
-          MCA student at PSIT Kanpur passionate about building modern,
-          responsive and high-performance web applications using React,
-          JavaScript, Node.js and Python.
+          MCA student and Frontend Developer passionate about building
+          modern, responsive and animated web applications using React,
+          JavaScript and modern UI technologies.
         </p>
 
+
         <div className="hero-btns">
-          <button className="hire-btn">Hire Me</button>
+
+          <a href="#contact">
+            <button className="hire-btn">
+              Hire Me
+            </button>
+          </a>
+
 
           <a href="/resume.pdf" download>
             <button className="resume-btn">
               Download Resume
             </button>
           </a>
+
         </div>
+
+
 
         <div className="hero-icons">
 
@@ -61,6 +75,7 @@ function Hero() {
             <FaGithub />
           </a>
 
+
           <a
             href="https://linkedin.com/in/yashraj-dixit-b5b3b83a9"
             target="_blank"
@@ -69,22 +84,30 @@ function Hero() {
             <FaLinkedin />
           </a>
 
+
           <a href="mailto:umaatuldixit9598990671@gmail.com">
             <FaEnvelope />
           </a>
 
+
         </div>
+
 
       </motion.div>
 
+
+
       <motion.div
         className="hero-right"
-        animate={{ y: [-15, 15, -15] }}
+        animate={{
+          y: [-15, 15, -15]
+        }}
         transition={{
           duration: 5,
-          repeat: Infinity,
+          repeat: Infinity
         }}
       >
+
 
         <div className="profile-circle">
 
@@ -95,10 +118,13 @@ function Hero() {
 
         </div>
 
+
       </motion.div>
+
 
     </section>
   );
 }
+
 
 export default Hero;
